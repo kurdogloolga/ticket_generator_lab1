@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "exam-ticket-generator"
+version = "1.0.0"
+description = "Консольный генератор экзаменационных билетов с журналом Excel"
+requires-python = ">=3.10"
+dependencies = [
+    "openpyxl>=3.1,<4",
+]
+
+[tool.setuptools]
+py-modules = ["ticket_generator"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
